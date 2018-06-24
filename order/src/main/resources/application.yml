@@ -1,0 +1,29 @@
+server:
+  port: 9001
+
+rmq:
+  host: localhost:5672
+  user: guest
+  pass: guest
+
+---
+
+spring:
+#  profiles: testkrw
+  application:
+    name: order.test.krw
+app:
+  order:
+    buy: test.krw-buy
+    sell: test.krw-sell
+    buybook: orderbook:test.krw-buy
+    sellbook: orderbook:test.krw-sell
+rmq:
+  routingkey: test.krw
+  order:
+    queue:
+      buy: test.krw.buy
+      sell: test.krw.sell
+    exchange:
+      buy: test.krw.buy-exchange
+      sell: test.krw.sell-exchange

@@ -1,0 +1,19 @@
+server:
+  port: 9000
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+rmq:
+  routingkey: test.krw
+  order:
+    queue:
+      buy: test.krw.buy
+      sell: test.krw.sell
+    exchange:
+      buy: test.krw.buy-exchange
+      sell: test.krw.sell-exchange
