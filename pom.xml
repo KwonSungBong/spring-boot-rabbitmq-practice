@@ -11,6 +11,8 @@
 	<modules>
 		<module>test</module>
 		<module>order</module>
+		<module>trade</module>
+		<module>wallet</module>
 	</modules>
 
 </project>

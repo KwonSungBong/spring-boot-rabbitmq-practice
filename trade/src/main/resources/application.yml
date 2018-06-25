@@ -1,0 +1,7 @@
+server:
+  port: 9002
+
+mq:
+  host: 192.168.99.100:5672
+  user: guest
+  pass: guest

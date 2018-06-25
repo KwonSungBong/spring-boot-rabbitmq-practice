@@ -1,0 +1,8 @@
+server:
+  port: 9003
+
+mq:
+  host: 192.168.99.100:5672
+  user: guest
+  pass: guest
+  listener: 0,2,4,6,8
