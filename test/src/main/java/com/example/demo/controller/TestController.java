@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.listener.TestListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -40,5 +41,23 @@ public class TestController {
         this.rabbitTemplate.convertAndSend(ORDER_BUY_QUEUE, "hello");
         return ResponseEntity.ok().body(null);
     }
+
+    @GetMapping("/testtest")
+    public ResponseEntity testtest() {
+        rabbitTemplate.convertAndSend(TestListener.QUEUE_NAME, null, "TESTTEST");
+        return ResponseEntity.ok().body(null);
+    }
+
+    @GetMapping("/testtesttest")
+    public ResponseEntity testtesttest() {
+        rabbitTemplate.convertAndSend("test.btc.cancel-exchange", "test.btc", "test");
+        return ResponseEntity.ok().body(null);
+    }
+
+//    @GetMapping("/testtesttesttest")
+//    public ResponseEntity testtesttesttest() {
+//        rabbitTemplate.convertAndSend("test.btc.cancel", null, "testtest");
+//        return ResponseEntity.ok().body(null);
+//    }
 
 }
