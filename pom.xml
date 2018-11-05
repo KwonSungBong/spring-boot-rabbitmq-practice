@@ -9,10 +9,11 @@
 	<packaging>pom</packaging>
 
 	<modules>
-		<module>test</module>
-		<module>order</module>
-		<module>trade</module>
-		<module>wallet</module>
+		<module>sample1/test</module>
+		<module>sample1/order</module>
+		<module>sample1/trade</module>
+		<module>sample1/wallet</module>
+		<module>sample2/test1</module>
 	</modules>
 
 </project>
